@@ -10,25 +10,6 @@
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  {
-    'kawre/leetcode.nvim',
-    build = ':TSUpdate html',
-    dependencies = {
-      'nvim-telescope/telescope.nvim',
-      'nvim-lua/plenary.nvim', -- required by telescope
-      'MunifTanjim/nui.nvim',
-
-      -- optional
-      'nvim-treesitter/nvim-treesitter',
-      -- 'rcarriga/nvim-notify',
-      'nvim-tree/nvim-web-devicons',
-    },
-    opts = {
-      ---@type lc.lang
-      lang = 'python3',
-      -- configuration goes here
-    },
-  },
 
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
@@ -332,7 +313,7 @@ require('lazy').setup({
 
           -- Opens a popup that displays documentation about the word under your cursor
           --  See `:help K` for why this keymap.
-          map('K', vim.lsp.buf.hover, 'Hover Documentation')
+          map('gh', vim.lsp.buf.hover, 'Hover Documentation')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
@@ -680,6 +661,26 @@ require('lazy').setup({
   -- {
   --   import = '',
   -- },
+
+  {
+    'kawre/leetcode.nvim',
+    build = ':TSUpdate html',
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+      'nvim-lua/plenary.nvim', -- required by telescope
+      'MunifTanjim/nui.nvim',
+
+      -- optional
+      'nvim-treesitter/nvim-treesitter',
+      -- 'rcarriga/nvim-notify',
+      'nvim-tree/nvim-web-devicons',
+    },
+    opts = {
+      ---@type lc.lang
+      lang = 'python3',
+      -- configuration goes here
+    },
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

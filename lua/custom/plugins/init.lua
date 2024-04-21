@@ -35,7 +35,11 @@ return {
       },
     },
     config = function()
-      require('java').setup()
+      local java = require 'java'
+      java.setup()
+
+      vim.keymap.set('n', '<leader>jt', java.test.run_current_class, { desc = '[J]ava: Run [T]est in Current Class' })
+      vim.keymap.set('n', '<leader>jv', java.test.view_last_report, { desc = '[J]ava: [V]iew Test Report' })
     end,
   },
 
@@ -54,7 +58,7 @@ return {
     },
     opts = {
       ---@type lc.lang
-      lang = 'python3',
+      lang = 'java',
       -- configuration goes here
     },
   },

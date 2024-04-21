@@ -356,6 +356,8 @@ require('lazy').setup({
           },
         },
 
+        eslint = {},
+
         volar = {},
 
         jdtls = {},
@@ -390,6 +392,7 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'google-java-format',
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -429,7 +432,10 @@ require('lazy').setup({
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+        javascript = { { 'prettierd', 'prettier' } },
+        typescript = { { 'prettierd', 'prettier' } },
+
+        java = { 'google-java-format' },
       },
     },
   },

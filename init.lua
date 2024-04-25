@@ -4,10 +4,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Open Windows browser from WSL
+-- Follow link under cursor using `gx` opens the Windows default browser in WSL
 vim.g.netrw_browsex_viewer = 'cmd.exe /C start'
 
--- Set to true if you have a Nerd Font installed
+-- Nerdfonts can be found at https://www.nerdfonts.com/
 vim.g.have_nerd_font = true
 
 -- options

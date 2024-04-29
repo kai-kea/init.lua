@@ -58,7 +58,15 @@ return {
     },
     opts = {
       ---@type lc.lang
-      lang = 'java',
+      lang = 'golang',
+      injector = { ---@type tableM<lc.lang, lc.inject>
+        ['java'] = {
+          before = 'import java.util.*;',
+        },
+        ['golang'] = {
+          before = 'package main',
+        },
+      },
       -- configuration goes here
     },
   },

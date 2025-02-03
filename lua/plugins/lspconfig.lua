@@ -87,6 +87,10 @@ return {
 
     local servers = {
       -- gopls = {},
+      clangd = {
+        filetypes = { 'c', 'h' },
+      },
+      ocamllsp = {},
       pyright = {},
       lua_ls = {
         -- cmd = {...},

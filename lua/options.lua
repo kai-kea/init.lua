@@ -32,3 +32,5 @@ vim.opt.scrolloff = 16
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
+
+vim.g.c_syntax_for_h = 1
